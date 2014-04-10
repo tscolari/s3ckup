@@ -1,6 +1,6 @@
 require 'aws/s3'
 
-module S3up
+module S3ckup
   class S3Mananger
     MANIFEST_FILE_NAME = 'manifest.yml'
 

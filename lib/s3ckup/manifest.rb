@@ -1,7 +1,7 @@
 require 'digest/md5'
 require 'yaml'
 
-module S3up
+module S3ckup
   class Manifest
     attr_reader :files
 

@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'pry'
 
-module S3up
+module S3ckup
   describe Manifest do
 
     context "Initization" do

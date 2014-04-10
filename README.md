@@ -1,4 +1,4 @@
-s3up
+s3ckup
 ====
 
 Ruby gem/command line tool for Incremental backuping to AWS S3.
@@ -17,7 +17,7 @@ INSTALLATION
 -----------
 
 ```
-  gem install s3up
+  gem install s3ckup
 ```
 
 
@@ -25,7 +25,7 @@ USAGE
 -----
 
 ```
-Usage: s3up OPTIONS --folders folder1,folder2,...
+Usage: s3ckup OPTIONS --folders folder1,folder2,...
     -k, --aws-key-id KEY_ID          AWS key id
     -a, --aws-access-key ACCESS_KEY  AWS access key
     -b, --s3-bucket BUCKET_NAME      S3 bucket name
@@ -38,6 +38,6 @@ Usage: s3up OPTIONS --folders folder1,folder2,...
 Example:
 
 ```
-s3up.rb -k $AWS_KEY -a $AWS_SECRET -b my_backup_bucket -r -f /myapp/uploads,/mydb/data
+s3ckup -k $AWS_KEY -a $AWS_SECRET -b my_backup_bucket -r -f /myapp/uploads,/mydb/data
 ```
 

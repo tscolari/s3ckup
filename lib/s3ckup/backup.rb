@@ -1,4 +1,4 @@
-module S3up
+module S3ckup
   class Backup
 
     def initialize(key_id, access_key, logger = Logger.new)

@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 's3ckup'
+require 's3ckup/command_line'
+S3ckup::CommandLine.new.run(ARGV)

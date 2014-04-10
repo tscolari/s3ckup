@@ -1,4 +1,4 @@
-module S3up
+module S3ckup
   class CommandLine
     require 'optparse'
     require 'logger'
@@ -8,7 +8,7 @@ module S3up
       logger.level = Logger::WARN
 
       options = fetch_options(args, logger)
-      S3up::Backup.new(options[:key_id], options[:access_key], logger).
+      S3ckup::Backup.new(options[:key_id], options[:access_key], logger).
         run(options[:bucket], options[:folders])
     end
 
@@ -17,7 +17,7 @@ module S3up
     def fetch_options(args, logger)
       Hash.new.tap do |options|
         OptionParser.new do |opts|
-          opts.banner = "Usage: s3up OPTIONS --folders folder1,folder2,..."
+          opts.banner = "Usage: s3ckup OPTIONS --folders folder1,folder2,..."
 
           opts.on("-k", "--aws-key-id KEY_ID", "AWS key id") do |key_id|
             options[:key_id] = key_id

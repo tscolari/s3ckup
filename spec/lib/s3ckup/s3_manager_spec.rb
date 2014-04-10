@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-module S3up
+module S3ckup
   describe S3Mananger do
     let(:key_id) { SecureRandom.uuid }
     let(:access_key) { SecureRandom.hex }
@@ -9,7 +9,7 @@ module S3up
     let(:manifest) { double(:manifest, file_list: files) }
     let(:logger) { Logger.new('/dev/null') }
 
-    subject { S3up::S3Mananger.new(key_id, access_key, logger) }
+    subject { S3Mananger.new(key_id, access_key, logger) }
 
     describe "#fetch_manifest" do
       it "should ask S3Object for the manifest in the bucket" do
