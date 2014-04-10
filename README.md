@@ -1,14 +1,31 @@
 s3up
 ====
 
-Ruby gem/command line tool for Incremental backuping to AWS S3. 
+Ruby gem/command line tool for Incremental backuping to AWS S3.
 
 My motivation for this was to be used in a backup container for docker. But it's a command line that can be used in any
-platform. It's already working, but this project still a work in progress
+platform.
 
+It will store a `manifest.yml` file in the root of the bucket, containing all
+file names and digests. On backup this file will be matched with a on time
+generated one, only updated/new files will be pushed to the bucket, and files
+that no longer exists will be deleted.
+
+There's no versioning, but you could use s3 built in versioning.
+
+INSTALLATION
+-----------
 
 ```
-Usage: s3up.rb OPTIONS --folders folder1,folder2,...
+  gem install s3up
+```
+
+
+USAGE
+-----
+
+```
+Usage: s3up OPTIONS --folders folder1,folder2,...
     -k, --aws-key-id KEY_ID          AWS key id
     -a, --aws-access-key ACCESS_KEY  AWS access key
     -b, --s3-bucket BUCKET_NAME      S3 bucket name
