@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/s3up'
+require_relative '../lib/s3up/command_line'
+S3up::CommandLine.new.run(ARGV)
