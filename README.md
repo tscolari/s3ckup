@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/tscolari/s3ckup.png)](https://codeclimate.com/github/tscolari/s3ckup)
+
 s3ckup
 ====
 
