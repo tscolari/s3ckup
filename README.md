@@ -3,6 +3,8 @@
 s3ckup
 ====
 
+Note: I've rebuild this tool using GO, which I think makes more sense for this job. If you are interested, the GO version is at https://github.com/tscolari/s3kup. It has a few extra features, like listing and downloading.
+
 Ruby gem/command line tool for Incremental backuping to AWS S3.
 
 My motivation for this was to be used in a backup container for docker. But it's a command line that can be used in any
